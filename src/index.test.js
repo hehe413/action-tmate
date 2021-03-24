@@ -7,7 +7,8 @@ jest.mock("@actions/tool-cache", () => ({
 }));
 jest.mock("fs", () => ({
   mkdirSync: () => true,
-  existsSync: () => true
+  existsSync: () => true,
+  unlinkSync: () => true,
 }));
 jest.mock('./helpers');
 import { execShellCommand } from "./helpers"
